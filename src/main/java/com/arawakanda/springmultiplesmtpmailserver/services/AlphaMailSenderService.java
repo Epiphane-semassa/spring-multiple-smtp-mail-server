@@ -29,26 +29,34 @@ public class AlphaMailSenderService {
     private List<JavaMailSenderImpl> mailSenders;
 
 
-    @PostConstruct
+    //@PostConstruct
     public void init() {
         try {
-            testMail(firstMailSender);
-            testMail(secondMailSender);
+            String toEmail = "semassaepiphane@gmail.com";
+            testMail(firstMailSender, toEmail, "");
+            testMail(secondMailSender, toEmail, "");
         } catch (MessagingException | IOException e) {
             log.error("AlphaMailSenderService::init ##---->> {}", e.getMessage());
+            try {
+                throw new Exception(e.getMessage());
+            } catch (Exception ex) {
+                throw new RuntimeException(ex);
+            }
         }
     }
 
-    public void testMail(JavaMailSenderImpl javaMailSender) throws MessagingException, IOException {
+    public void testMail(JavaMailSenderImpl javaMailSender, String toEmail, String fromAddress) throws MessagingException, IOException {
         MimeMessage message = javaMailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message,
                 MimeMessageHelper.MULTIPART_MODE_MIXED_RELATED,
                 StandardCharsets.UTF_8.name());
 
-        helper.setTo("semassaepiphane@gmail.com");
+        helper.setTo(toEmail);
         helper.setText("Sending. Hello test mail multiple smtp servers.", false);
         helper.setSubject("Test Sending Mail");
-        String fromAddress = javaMailSender.getJavaMailProperties().getProperty("mail.from-address");
+        if (fromAddress == null || fromAddress.isBlank() || fromAddress.isEmpty()) {
+            fromAddress = javaMailSender.getJavaMailProperties().getProperty("mail.from-address");
+        }
         helper.setFrom(fromAddress, "MSMTP-SERVER");
         helper.setValidateAddresses(true);
         javaMailSender.send(message);

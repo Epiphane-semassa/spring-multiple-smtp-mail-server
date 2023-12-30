@@ -22,15 +22,11 @@ public class DynamicBeanDefinitionRegistrar implements BeanDefinitionRegistryPos
                 .get(environment)
                 .bind(PROPERTIES_PREFIX, MailListProperties.class)
                 .orElseThrow(IllegalStateException::new);
-        //System.out.println("mailListProperties");
-        //System.out.println(mailListProperties);
     }
 
     @Override
     public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {
         mailListProperties.getList().forEach((beanName, mailProperties) -> {
-            //System.out.println("\nBeanName");
-            //System.out.println(beanName);
             GenericBeanDefinition definition = new GenericBeanDefinition();
             definition.setBeanClass(JavaMailSenderImpl.class);
             definition.setInstanceSupplier(() -> {
