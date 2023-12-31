@@ -4,6 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 
+/***
+ * --------------->>>>>>>> MAKED BY DE XAAG <<<<<<<<<<<<<<<-------------
+ */
 @SpringBootApplication
 @ConfigurationPropertiesScan(basePackages = "com.arawakanda.springmultiplesmtpmailserver.configurationproperties")
 public class SpringMultipleSmtpMailServerApplication {
@@ -13,3 +16,5 @@ public class SpringMultipleSmtpMailServerApplication {
     }
 
 }
+
+

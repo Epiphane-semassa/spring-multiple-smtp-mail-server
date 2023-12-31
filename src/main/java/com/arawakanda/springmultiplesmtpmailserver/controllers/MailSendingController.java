@@ -7,6 +7,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/***
+ * >>>>>>>> MAKED BY DE XAAG <<<<<<<<<
+ */
+
+
 @RestController
 @RequestMapping("/api/mails")
 public class MailSendingController {
@@ -25,3 +30,5 @@ public class MailSendingController {
 
 
 }
+
+

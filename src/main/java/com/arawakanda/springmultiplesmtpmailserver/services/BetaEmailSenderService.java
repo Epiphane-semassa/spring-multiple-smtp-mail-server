@@ -8,6 +8,10 @@ import org.springframework.web.client.HttpServerErrorException;
 
 import java.util.Properties;
 
+/***
+ * --------------->>>>>>>> MAKED BY DE XAAG <<<<<<<<<<<<<<<-------------
+ */
+
 @Service
 @Slf4j
 public class BetaEmailSenderService {
