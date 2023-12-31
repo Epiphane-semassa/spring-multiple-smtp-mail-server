@@ -7,6 +7,10 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.Map;
 
+/***
+ * >>>>>>>> MAKED BY DE XAAG <<<<<<<<<
+ */
+
 @Configuration
 @ConfigurationProperties(prefix = "mail")
 @ConfigurationPropertiesScan
@@ -23,3 +27,4 @@ public class MailListProperties {
     }
 
 }
+

@@ -14,6 +14,10 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
+/***
+ * >>>>>>>> MAKED BY DE XAAG <<<<<<<<<
+ */
+
 @Service
 @Slf4j
 public class AlphaMailSenderService {
@@ -66,3 +70,5 @@ public class AlphaMailSenderService {
     }
 
 }
+
+//--------------->>>>>>>> MAKED BY DE XAAG <<<<<<<<<<<<<<<-------------//

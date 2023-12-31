@@ -2,6 +2,11 @@ package com.arawakanda.springmultiplesmtpmailserver.payload;
 
 import lombok.Data;
 
+/***
+ * >>>>>>>> MAKED BY DE XAAG <<<<<<<<<
+ */
+
+
 @Data
 public class SendEmailData {
 
@@ -26,3 +31,4 @@ public class SendEmailData {
     private boolean authEnabled = true;
 
 }
+

@@ -4,6 +4,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 
+/***
+ * >>>>>>>> MAKED BY DE XAAG <<<<<<<<<
+ */
+
+
 @Configuration
 public class DynamicBeanDefinitionRegistrarConfiguration {
     @Bean
@@ -11,3 +16,6 @@ public class DynamicBeanDefinitionRegistrarConfiguration {
         return new DynamicBeanDefinitionRegistrar(environment);
     }
 }
+
+
+

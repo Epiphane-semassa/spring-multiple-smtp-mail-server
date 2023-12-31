@@ -12,6 +12,10 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
 
 import java.util.Properties;
 
+/***
+ * >>>>>>>> MAKED BY DE XAAG <<<<<<<<<
+ */
+
 public class DynamicBeanDefinitionRegistrar implements BeanDefinitionRegistryPostProcessor {
 
     private static MailListProperties mailListProperties;
