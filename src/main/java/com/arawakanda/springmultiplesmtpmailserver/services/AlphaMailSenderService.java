@@ -21,10 +21,11 @@ public class AlphaMailSenderService {
     @Autowired
     @Qualifier(value = "first")
     private JavaMailSenderImpl firstMailSender;
-    @Autowired
+
+    /*@Autowired
     @Qualifier(value = "second")
     private JavaMailSenderImpl secondMailSender;
-
+*/
     @Autowired
     private List<JavaMailSenderImpl> mailSenders;
 
@@ -34,7 +35,7 @@ public class AlphaMailSenderService {
         try {
             String toEmail = "semassaepiphane@gmail.com";
             testMail(firstMailSender, toEmail, "");
-            testMail(secondMailSender, toEmail, "");
+            //testMail(secondMailSender, toEmail, "");
         } catch (MessagingException | IOException e) {
             log.error("AlphaMailSenderService::init ##---->> {}", e.getMessage());
             try {

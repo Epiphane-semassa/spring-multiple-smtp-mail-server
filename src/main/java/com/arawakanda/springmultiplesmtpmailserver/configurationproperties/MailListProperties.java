@@ -14,10 +14,6 @@ public class MailListProperties {
 
     private Map<String, MailProperties> list;
 
-    public MailListProperties(Map<String, MailProperties> list) {
-        this.list = list;
-    }
-
     public Map<String, MailProperties> getList() {
         return list;
     }
