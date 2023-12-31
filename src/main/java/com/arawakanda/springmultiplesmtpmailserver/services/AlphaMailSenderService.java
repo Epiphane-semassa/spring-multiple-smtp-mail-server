@@ -18,7 +18,6 @@ import java.util.List;
  * >>>>>>>> MAKED BY DE XAAG <<<<<<<<<
  */
 
-
 @Service
 @Slf4j
 public class AlphaMailSenderService {
